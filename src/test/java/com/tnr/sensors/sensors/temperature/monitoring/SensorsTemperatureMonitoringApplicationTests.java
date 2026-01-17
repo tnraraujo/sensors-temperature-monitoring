@@ -1,4 +1,4 @@
-package com.tnr.sensors.sensors_temperature_monitoring;
+package com.tnr.sensors.sensors.temperature.monitoring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
