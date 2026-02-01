@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TemperatureLogRepository extends JpaRepository<TemperatureLog, String> {
-    Page<TemperatureLog> findAllBySensorId(String sensorId, Pageable pageable);
+import java.util.UUID;
+
+public interface TemperatureLogRepository extends JpaRepository<TemperatureLog, UUID> {
+    Page<TemperatureLog> findAllBySensorId(UUID sensorId, Pageable pageable);
 }

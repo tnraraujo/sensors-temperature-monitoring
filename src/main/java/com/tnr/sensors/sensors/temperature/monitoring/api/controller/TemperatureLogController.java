@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("api/sensors/{sensorId}/temperatures")
 @RequiredArgsConstructor
@@ -18,7 +20,7 @@ public class TemperatureLogController {
     private final TemperatureLogRepository repository;
 
     @GetMapping
-    public Page<TemperatureLog> search(@PathVariable String sensorId, Pageable pageable) {
+    public Page<TemperatureLog> search(@PathVariable UUID sensorId, Pageable pageable) {
         return repository.findAllBySensorId(sensorId, pageable);
     }
 }
